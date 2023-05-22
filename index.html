@@ -83,7 +83,7 @@
     <div class="hero-container" data-aos="fade-in">
       <h1>Welcome to My Leisure World!
     </h1>
-      <img src="assets/img/hero-imgs.jpg.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100" width=100% height=800> 
+      <img src="assets/img/hero-imgs.jpg.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100" width=100% height=600> 
         </div>
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
@@ -333,9 +333,21 @@
 
         </div>
       </div>
+
+
     </section><!-- End Video Section -->
 
     <!-- ======= Team Section ======= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      var id = prompt("請輸入會員帳號");
+      if (id=='abc')
+        $('#team').show();
+      else
+        $('#team').hide();
+    });
+</script>
     <section id="team" class="padd-section text-center">
 
       <div class="container" data-aos="fade-up">
