@@ -51,26 +51,9 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">主頁</a></li>
           <li><a class="nav-link scrollto" href="#about-us">遊戲</a></li>
-          <li><a class="nav-link scrollto" href="#features">webtoon</a></li>
-          <li><a class="nav-link scrollto" href="#screenshots">畫圖</a></li>
-          <li><a class="nav-link scrollto" href="#team">樂器</a></li>
           <li><a class="nav-link scrollto" href="#pricing">編織</a></li>
-          <li class="dropdown"><a href="#"><span>電視節目</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#"></a></li>
-              <li class="dropdown"><a href="#"><span>動畫</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">哆啦A夢</a></li>
-                  <li><a href="#">湯姆貓與傑利鼠</a></li>
-                  <li><a href="#">進擊的巨人</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#blog">其他</a></li>
+          <li><a class="nav-link scrollto" href="#contact">FEEDBACK</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -82,7 +65,6 @@
   <section id="hero">
     <div class="hero-container" data-aos="fade-in">
    
-
 <head>
 <style>
 @keyframes typing {
@@ -97,6 +79,7 @@
 
 .typewriter-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -108,30 +91,34 @@
   margin: 0 auto;
   letter-spacing: .15em;
   opacity: 0;
-}
-
-.typewriter:first-child {
-  animation: typing 2s steps(40, end) infinite;
-}
-
-.typewriter:nth-child(2) {
-  animation: typing 2s steps(40, end) infinite 3.5s;
-}
-
-.typewriter:nth-child(3) {
-  animation: typing 2s steps(40, end) infinite 7s;
+  font-size: 32px;
 }
 
 .typewriter.fade-out {
-  animation: fadeOut 1s ease-in forwards;
+  animation: fadeOut 2s ease-in forwards;
+}
+
+.typewriter.fade-in {
+  animation: typing 2s steps(40, end) infinite;
+}
+
+.typewriter-row {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 </head>
 <body>
+  
 <div class="typewriter-container">
-  <h1 class="typewriter">Welcome to My Leisure World!</h1>
-  <h1 class="typewriter">分享你都做些甚麼吧</h1>
-  <h1 class="typewriter">生活動力</h1>
+  <div class="typewriter-row">
+    <h1 class="typewriter fade-in">Welcome to My Leisure World!</h1>
+  </div>
+  <div class="typewriter-row">
+    <h1 class="typewriter fade-out">分享你休息時都做些甚麼吧</h1>
+  </div>
 </div>
 
 <script>
@@ -140,9 +127,11 @@ const typewriters = document.querySelectorAll('.typewriter');
 function startTypewriterAnimation() {
   let index = 0;
   setInterval(() => {
+    typewriters[index].classList.remove('fade-in');
     typewriters[index].classList.add('fade-out');
     index = (index + 1) % typewriters.length;
     typewriters[index].classList.remove('fade-out');
+    typewriters[index].classList.add('fade-in');
   }, 4000);
 }
 
@@ -151,23 +140,11 @@ startTypewriterAnimation();
 
 </body>
 
-
-
-
-
-
-
-
     </h1>
-      <img src="assets/img/hero-imgs.jpg.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100" width=100% height=600> 
+     <img src="assets/img/首圖.jpg" class="img-fluid" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100" width= height=30>
+
         </div>
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
-        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
-    </div>
+    
   </section><!-- End Hero Section -->
 
   <main id="main">
@@ -227,35 +204,29 @@ startTypewriterAnimation();
 
              <iframe width="80%" height="250" src="assets/img/webtoon.png" allowfullscreen div class="row-center"></iframe>
               <h4>Webtoon</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
+              
+             
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-block">
 
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/6t_Cs1_bzFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              <h4>Brawl Stars</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
+              <iframe width="80%" height="250" src="assets/img/傳說.jfif" allowfullscreen div class="row-center"></iframe>
+              <h4>傳說對決</h4>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="feature-block">
 
-              <iframe width="100%" height="250" src="assets/img/tile fun.png"></iframe>
+             <iframe width="80%" height="250" src="assets/img/下載.jfif" allowfullscreen div class="row-center"></iframe>
               <h4>Tile Fun</h4>
-              <p>Great</p>
-              <a href="#">read more</a>
 
             </div>
           </div>
 
-             <h2>下面會一一介紹</h2>
+             
         </div>
       </div>
 
@@ -265,387 +236,489 @@ startTypewriterAnimation();
     <section id="about-us" class="about-us padd-section">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
+           <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+         <h1>遊戲</h1>
+          
 
-          <div class="col-md-5 col-lg-3">
-            <img src="assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
-          </div>
-
-          <div class="col-md-7 col-lg-5">
+         
             <div class="about-content" data-aos="fade-left" data-aos-delay="100">
 
-           
-              <h2><span>GAMES</span> </h2>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-              </p>
+             <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="width: 30rem;">
+       <style>
+    .card-img-top {
+      object-fit: cover; height: 100%; width: 100%;
+      object-position: top;
+    }
 
-              <ul class="list-unstyled">
-                <li><i class="vi bi-chevron-right"></i>Creative Design</li>
-                <li><i class="vi bi-chevron-right"></i>Retina Ready</li>
-                <li><i class="vi bi-chevron-right"></i>Easy to Use</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-                <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-              </ul>
-
-            </div>
-          </div>
-
-        </div>
+    .card {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>  
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/荒野首頁.jpg" class="card-img-top" alt="第一張圖片">
       </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="padd-section text-center">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <h2>TRAVEL</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/paint-palette.svg" alt="img">
-              <h4>creative design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/vector.svg" alt="img">
-              <h4>Retina Ready</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/design-tool.svg" alt="img">
-              <h4>easy to use</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/asteroid.svg" alt="img">
-              <h4>Free Updates</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/asteroid.svg" alt="img">
-              <h4>Free Updates</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/cloud-computing.svg" alt="img">
-              <h4>App store support</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/pixel.svg" alt="img">
-              <h4>Perfect Pixel</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="feature-block">
-              <img src="assets/img/svg/code.svg" alt="img">
-              <h4>clean codes</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-
-        </div>
+      <div class="carousel-item">
+        <img src="assets/img/荒野亂鬥.jpg" class="card-img-top" alt="第二張圖片">
       </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Screenshots Section ======= -->
-    <section id="screenshots" class="padd-section text-center">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <h2>DRAWING</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
-
-        <div class="screens-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/screen/1.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/2.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/3.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/4.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/5.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/6.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/7.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/screen/8.jpg" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+      <div class="carousel-item">
+        <img src="assets/img/標誌.jpg" class="card-img-top" alt="第三張圖片">
       </div>
-
-    </section><!-- End Screenshots Section -->
-
-    <!-- ======= Video Section ======= -->
-    <section id="video" class="text-center">
-      <div class="overlay">
-        <div class="container-fluid container-full" data-aos="zoom-in">
-
-          <div class="row">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q&feature=emb_title" class="glightbox play-btn"></a>
-          </div>
-
-        </div>
+      <div class="carousel-item">
+        <img src="assets/img/傑西.JPG" class="card-img-top" alt="第四張圖片">
       </div>
-
-
-    </section><!-- End Video Section -->
-
-    <!-- ======= Team Section ======= -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <section id="team" class="padd-section text-center">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-
-          <h2>INSTRUMENTS</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-            <div class="team-block bottom">
-              <img src="assets/img/team/1.jpg" class="img-responsive" alt="img">
-              <div class="team-content">
-                <ul class="list-unstyled">
-                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                  <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                  <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                </ul>
-                <span>manager</span>
-                <h4>Kimberly Tran</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-            <div class="team-block bottom">
-              <img src="assets/img/team/2.jpg" class="img-responsive" alt="img">
-              <div class="team-content">
-                <ul class="list-unstyled">
-                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                  <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                  <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                </ul>
-                <span>manager</span>
-                <h4>Kimberly Tran</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-            <div class="team-block bottom">
-              <img src="assets/img/team/3.jpg" class="img-responsive" alt="img">
-              <div class="team-content">
-                <ul class="list-unstyled">
-                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                  <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                  <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                </ul>
-                <span>manager</span>
-                <h4>Kimberly Tran</h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-            <div class="team-block bottom">
-              <img src="assets/img/team/4.jpg" class="img-responsive" alt="img">
-              <div class="team-content">
-                <ul class="list-unstyled">
-                  <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                  <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                  <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                </ul>
-                <span>manager</span>
-                <h4>Kimberly Tran</h4>
-              </div>
-            </div>
-          </div>
-
-        </div>
+      <div class="carousel-item">
+        <img src="assets/img/撥可.JPG" class="card-img-top" alt="第五張圖片">
       </div>
-    </section><!-- End Team Section -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">荒野亂鬥</h5>
+    <p class="card-text">從高中開始玩這款遊戲，因為在讀書時會忍不住打開手機玩，所以前前後後解除和重新安裝了五次。大學後比較自律，至今荒野依舊存活在我的手機裡。是目前最喜歡的手遊</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        基本資料
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">是由芬蘭電子遊戲開發商Supercell公司開發和發布的一款的手機遊戲，第三張圖是荒野亂鬥的標誌。遊戲有多種模式可以選擇，大略可分為三對三或雙人/單人模式。過去可透過開啟寶箱蒐集新英雄和能量點數進行升級，近期改制為蒐集貸幣兌換英雄和其他獎勵。其餘獎勵包含表情貼。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       喜歡的原因
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">畫風可愛，稍微訓練一下就能快速上手。讓我覺得最溫馨的是每個角色都有故事背景，彼此也都有相關，發行公司也會製作角色的動畫。每個角色展示圖也很用心，細節部分處理得很好。聊天時使用的表情貼也很可愛。第四和第五張圖是我最喜歡使用的角色。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        心得
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">可以感受到製作公司很用心，只是近期獲得獎勵制度的改變讓我挺不習慣的，沒有之前開獎的驚喜感。網路連線問題也時常是這款遊戲受人詬病的地方。不過撇除這些缺點，他的畫風和角色故事依舊吸引著我繼續遊玩。</div>
+    </div>
+  </div>
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="padd-section text-center">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-
-          <div class="col-md-8">
-
-            <div class="testimonials-content">
-              <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner" role="listbox">
-
-                  <div class="carousel-item  active">
-                    <div class="top-top">
-
-                      <h2>Our Users Speack volumes us</h2>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries.</p>
-                      <h4>Kimberly Tran<span>manager</span></h4>
-
-                    </div>
-                  </div>
-
-                  <div class="carousel-item ">
-                    <div class="top-top">
-
-                      <h2>Our Users Speack volumes us</h2>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries.</p>
-                      <h4>Henderson<span>manager</span></h4>
-
-                    </div>
-                  </div>
-
-                  <div class="carousel-item ">
-                    <div class="top-top">
-
-                      <h2>Our Users Speack volumes us</h2>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries.</p>
-                      <h4>David Spark<span>manager</span></h4>
-
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="btm-btm">
-
-                  <ul class="list-unstyled carousel-indicators">
-                    <li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
-                  </ul>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
+</div>
+  </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card" style="width: 30rem;">
+      <style>
       </div>
-    </section><!-- End Testimonials Section -->
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+       <style>
+    .card-img-top {
+      object-fit: cover; height: 100%; width: 100%;
+      object-position: top;
+    }
 
+    .card {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>  
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/僵屍首圖.JPG" class="card-img-top" alt="第一張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/花園.JPG" class="card-img-top" alt="第二張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/植物1.JPG" class="card-img-top" alt="第三張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/植物2.JPG" class="card-img-top" alt="第四張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/僵屍1.JPG" class="card-img-top" alt="第五張圖片">
+      </div>
+    <div class="carousel-item">
+        <img src="assets/img/伴舞.JPG" class="card-img-top" alt="第六張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/報紙.JPG" class="card-img-top" alt="第七張圖片">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">植物大戰僵屍</h5>
+    <p class="card-text">第一次接觸的遊戲，高中前很少有機會接觸電玩，是小時候最有印象的二個遊戲之一。操作簡單，遊戲內還有可以種植物的花園，是我最喜歡的部分。</p>
+  </div>
+  <ul class="list-group list-group-flush">
+       <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        基本資料
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">是一款塔防遊戲，玩家設定以保護自家園為目標，在後花園或屋頂放置植物攻擊襲擊的僵屍。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       喜歡的原因
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">國小時看阿姨在玩這款遊戲，而開啟我的電玩世界的認知。畫風一樣很可愛，難度也在可以接受的範圍。是至今仍很懷念的遊戲</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        心得
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">雖然國小時不會玩而一直輸，不太喜歡這款遊戲，但高中重新下載來玩時，卻有十分懷念的感覺。</div>
+    </div>
+  </div>
+</div>
+  </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card" style="width: 30rem;">
+      <style>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+       <style>
+    .card-img-top {
+      object-fit: cover; height: 100%; width: 100%;
+      object-position: top;
+    }
+
+    .card {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>  
+  <div id="carouselExampleI" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicator">
+      <li data-bs-target="#carouselExampleI" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleI" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleI" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carouselExampleI" data-bs-slide-to="3"></li>
+      <li data-bs-target="#carouselExampleI" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/憤怒鳥首圖.JPG" class="card-img-top" alt="第一張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/憤1.JPG" class="card-img-top" alt="第二張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/憤2.JPG" class="card-img-top" alt="第三張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/憤3.JPG" class="card-img-top" alt="第四張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/憤4.JPG" class="card-img-top" alt="第五張圖片">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleI" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleI" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">憤怒鳥</h5>
+    <p class="card-text">和植物大戰僵屍是同時認識的遊戲，小時候玩的就這兩個電玩。</p>
+  </div>
+  <ul class="list-group list-group-flush">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        基本資料
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">運用彈弓，讓憤怒鳥們飛向建築物攻擊小豬，需要玩家調整攻擊角度才能破關。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       喜歡的原因
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">國小的我也能玩得很開心的簡單小遊戲。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        心得
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">有的時候不能破關，憤怒的就會變成我...</div>
+    </div>
+  </div>
+</div>
+  </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card" style="width: 30rem;">
+      <style>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+        <style>
+    .card-img-top {
+      object-fit: cover; height: 100%; width: 100%;
+      object-position: top;
+    }
+
+    .card {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>  
+  <div id="carouselExamp" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicator">
+      <li data-bs-target="#carouselExamp" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExamp" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExamp" data-bs-slide-to="2"></li>
+      <li data-bs-target="#carouselExamp" data-bs-slide-to="3"></li>
+      <li data-bs-target="#carouselExamp" data-bs-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/傳說首圖.JPG" class="card-img-top" alt="第一張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/傳說.JPG" class="card-img-top" alt="第二張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/傳說1.JPG" class="card-img-top" alt="第三張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/傳說2.JPG" class="card-img-top" alt="第四張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/傳說3.JPG" class="card-img-top" alt="第五張圖片">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExamp" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExamp" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">傳說對決</h5>
+    <p class="card-text">大學後朋友推薦的遊戲，現在仍在摸索中。，</p>
+  </div>
+  <ul class="list-group list-group-flush">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        基本資料
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">5v5的對決模式，也有其他戰鬥模式。是一款以推塔維目標獲勝的遊戲。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       喜歡的原因
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">相較於其他玩過的遊戲，難度較高，當過關和成為當局MVP時很有成就感。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        心得
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">因為還不是很熟悉每個角色，所以很怕會妨礙到隊友。不過勝利時覺得挺有成就感的，</div>
+    </div>
+  </div>
+</div>
+  </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card" style="width: 30rem;">
+      <style>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 18rem;">
+       <style>
+    .card-img-top {
+      object-fit: cover; height: 100%; width: 100%;
+      object-position: top;
+    }
+
+    .card {
+      margin-top: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  </style>  
+  <div id="carouselExampl" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampl" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampl" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/tile首頁.JPG" class="card-img-top" alt="第一張圖片">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/tile 1.JPG" class="card-img-top" alt="第二張圖片">
+      </div>
+    <a class="carousel-control-prev" href="#carouselExampl" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">上一張</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampl" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">下一張</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Tile fun</h5>
+    <p class="card-text">一樣是同學推薦，是很耐玩的遊戲。</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        基本資料
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">破觀條件是需消除三個相同的方塊，但只能消除最上方顯示的方塊，不能消除被擋住的方塊。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       喜歡的原因
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">無聊的時候可以玩這個動腦，需要技巧性地消除方塊才能過關。</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        心得
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">到了一定關卡後，難度提升，需要重新挑戰好幾次才能過關。是一個很好打發時間的遊戲。，又可以順便健腦(預防失智)。</div>
+    </div>
+  </div>
+</div>
+  </ul>
+    </div>
+  </div>
+ 
+      </section><!-- End About Us Section -->
+
+  
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="padd-section text-cente">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
-          <h2>CROCHET</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-        </div>
+          <h2>編織</h2>
+<p class="separator">修養心性和培養耐心...</p>
+           <img src="assets/img/編織.jpg" alt="图片描述">
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>basic</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>PERSONAL</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>BUSINESS</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="block-pricing">
-              <div class="pricing-table">
-                <h4>profeesional</h4>
-                <h2>$29</h2>
-                <ul class="list-unstyled">
-                  <li><b>4 GB</b> Ram</li>
-                  <li><b>7/24</b> Tech Support</li>
-                  <li><b>40 GB</b> SSD Cloud Storage</li>
-                  <li>Monthly Backups</li>
-                  <li>Palo Protection</li>
-                </ul>
-                <div class="table_btn">
-                  <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Pricing Section -->
 
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="padd-sectio">
@@ -653,41 +726,35 @@ startTypewriterAnimation();
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
-          <h2>Latest posts</h2>
-          <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+          <h2>其他</h2>
+          <h3 class="separator">有接觸或正在嘗試中</h3>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-md-6 col-lg-4">
             <div class="block-blog text-left">
-              <a href="#"><img src="assets/img/blog/blog-image-1.jpg" alt="img"></a>
+              <a href="#"><img src="assets/img/圖.jpg" height="220" alt="img"></a>
               <div class="content-blog">
-                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                <span>05, juin 2017</span>
-                <a class="float-end readmore" href="#">read more</a>
+                <h4>畫畫也是大學後新發現很有趣的一件事情，圖中是畫給同學的生日卡片包裝封面。</h4>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
             <div class="block-blog text-left">
-              <a href="#"><img src="assets/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
+              <a href="#"><img src="assets/img/書.jpg" height="220" class="img-responsive" alt="img"></a>
               <div class="content-blog">
-                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                <span>05, juin 2017</span>
-                <a class="float-end readmore" href="#">read more</a>
+                <h4>從國中後很久沒好好閱讀了，最近想開始重新有閱讀好習慣。</h4>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
             <div class="block-blog text-left">
-              <a href="#"><img src="assets/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
+              <a href="#"><img src="assets/img/仙人掌.jpg" height="220" class="img-responsive" alt="img"></a>
               <div class="content-blog">
-                <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                <span>05, juin 2017</span>
-                <a class="float-end readmore" href="#">read more</a>
+                <h4>在市集買了兩株仙人掌後，覺得開始能以較不疾不徐的心情面對繁雜的事物，前兩個禮拜又不小心買了一株。</h4>
               </div>
             </div>
           </div>
@@ -726,41 +793,16 @@ startTypewriterAnimation();
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
-          <h2>Contact</h2>
-          <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h2>FEEDBACK</h2>
         </div>
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-3 col-md-4">
-
-            <div class="info">
-              <div>
-                <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
+         
 
           </div>
                
-          <div class="col-lg-5 col-md-8">
+          <div class="col-lg-6 col-md-6">
             <div class="form">
              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3K-9Bkwrh-75ofD7kyTNLCLRet3ljES4rgZ4avPcGcuOKlw/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
             </div>
@@ -779,82 +821,29 @@ startTypewriterAnimation();
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
-
+            <a class="navbar-brand" href="#">HAVE FUN</a>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-3 col-lg-2">
           <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+       <style>
+           h3 {
+               color: white;
+               }
+             </style>
+            <h3>LIVE HAPPILY </h3>   
 
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Support</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-
-
-
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
+        
         </div>
 
       </div>
-    </div>
-
     <div class="copyrights">
       <div class="container">
-        <p>&copy; Copyrights eStartup. All rights reserved.</p>
+        <p>&copy; Copyrights HAVE FUN. All rights reserved.</p>
         <div class="credits">
           <!--
           All the links in the footer should remain intact.
